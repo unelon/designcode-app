@@ -1,19 +1,50 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, ScrollView } from 'react-native';
 import styled from "styled-components";
 import Card from './components/Card';
+import { Ionicons } from "@expo/vector-icons";
+import { NotificationIcon } from './components/Icons';
 
 export default function App() {
   return (
     <Container>
-      <Titlebar>
-        <Avatar source={require('./assets/avatar.jpg')} />
-      <Title>Welcome back,</Title>
-      <Name>Rune</Name>
-      </Titlebar>
-      <Subtitle>Continue Learning</Subtitle>
-      <Card/>
+      <SafeAreaView>      
+        <ScrollView style={{ height: "100%" }}>
+          <Titlebar>
+            <Avatar source={require('./assets/avatar.jpg')} />
+          <Title>Welcome back,</Title>
+          <Name>Rune</Name>
+          <NotificationIcon 
+          style={{ position:'absolute', right: 20, top: 5 }}
+          />
+          </Titlebar>
+          <Subtitle>Continue Learning</Subtitle>
+          <ScrollView horizontal={true} style={{ paddingBottom: 30 }} 
+          showsHorizontalScrollIndicator={false}>
+            <Card 
+            title="Styled Components" 
+            image={require('./assets/background2.jpg')} 
+            caption="dsa" 
+            subtitle="Fantastisk emne" 
+            logo={require('./assets/logo-react.png')}
+            />
+            <Card 
+            title="Styled Components" 
+            image={require('./assets/background5.jpg')} 
+            caption="dsa" 
+            subtitle="Fantastisk emne" 
+            logo={require('./assets/logo-react.png')}
+            />
+            <Card 
+            title="Styled Components" 
+            image={require('./assets/background8.jpg')} 
+            caption="dsa" 
+            subtitle="Fantastisk emne" 
+            logo={require('./assets/logo-react.png')}
+            />
+          </ScrollView>
+        </ScrollView>
+      </SafeAreaView>
     </Container>
   );
 }
