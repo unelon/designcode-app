@@ -2,18 +2,30 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import styled from "styled-components";
+import Card from './components/Card';
 
 export default function App() {
   return (
     <Container>
       <Titlebar>
         <Avatar source={require('./assets/avatar.jpg')} />
-      <Title>Welcome, back</Title>
-      <Name>Meng</Name>
+      <Title>Welcome back,</Title>
+      <Name>Rune</Name>
       </Titlebar>
+      <Subtitle>Continue Learning</Subtitle>
+      <Card/>
     </Container>
   );
 }
+
+const Subtitle = styled.Text `
+color: #b8bece;
+font-weight: 600;
+font-size: 15px;
+margin-left: 20px;
+margin-top: 50px;
+text-transform: uppercase;
+`
 
 const Container = styled.View`
 flex: 1;
@@ -48,3 +60,5 @@ position:absolute;
 top: 0;
 left: 0;
 `;
+
+
