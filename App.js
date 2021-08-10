@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Card from './components/Card';
 import { Ionicons } from "@expo/vector-icons";
 import { NotificationIcon } from './components/Icons';
+import Logo from "./components/Logo";
 
 export default function App() {
   return (
@@ -17,8 +18,49 @@ export default function App() {
           <NotificationIcon 
           style={{ position:'absolute', right: 20, top: 5 }}
           />
-          </Titlebar>
+          </Titlebar>          
           <Subtitle>Continue Learning</Subtitle>
+          <ScrollView 
+          horizontal={true} 
+          showsHorizontalScrollIndicator={false} 
+          style={{ padding: 20, paddingLeft: 12 }}>          
+            <Logo
+            image={require("./assets/logo-framerx.png")} 
+            text="Framer X"
+            />
+            <Logo
+            image={require("./assets/logo-figma.png")} 
+            text="Figma"
+            />
+            <Logo
+            image={require("./assets/logo-swift.png")} 
+            text="Swift"
+            />
+            <Logo
+            image={require("./assets/logo-invision.png")} 
+            text="Invision"
+            />
+            <Logo
+            image={require("./assets/logo-react.png")} 
+            text="React"
+            />
+            <Logo
+            image={require("./assets/logo-sketch.png")} 
+            text="Sketch"
+            />
+            <Logo
+            image={require("./assets/logo-studio.png")} 
+            text="Studio"
+            />
+            <Logo
+            image={require("./assets/logo-vue.png")} 
+            text="Vue"
+            />
+            <Logo
+            image={require("./assets/logo-xd.png")} 
+            text="XD"
+            />
+          </ScrollView>
           <ScrollView horizontal={true} style={{ paddingBottom: 30 }} 
           showsHorizontalScrollIndicator={false}>
             <Card 
