@@ -18,72 +18,32 @@ export default function App() {
           <NotificationIcon 
           style={{ position:'absolute', right: 20, top: 5 }}
           />
-          </Titlebar>          
-          <Subtitle>Continue Learning</Subtitle>
+          </Titlebar>                    
           <ScrollView 
           horizontal={true} 
           showsHorizontalScrollIndicator={false} 
-          style={{ padding: 20, paddingLeft: 12 }}>          
+          style={{ padding: 20, paddingLeft: 12, paddingTop: 30 }}> 
+          {logos.map((logo, index) => (
             <Logo
-            image={require("./assets/logo-framerx.png")} 
-            text="Framer X"
+            key={index}
+            image={logo.image} 
+            text={logo.text}
             />
-            <Logo
-            image={require("./assets/logo-figma.png")} 
-            text="Figma"
-            />
-            <Logo
-            image={require("./assets/logo-swift.png")} 
-            text="Swift"
-            />
-            <Logo
-            image={require("./assets/logo-invision.png")} 
-            text="Invision"
-            />
-            <Logo
-            image={require("./assets/logo-react.png")} 
-            text="React"
-            />
-            <Logo
-            image={require("./assets/logo-sketch.png")} 
-            text="Sketch"
-            />
-            <Logo
-            image={require("./assets/logo-studio.png")} 
-            text="Studio"
-            />
-            <Logo
-            image={require("./assets/logo-vue.png")} 
-            text="Vue"
-            />
-            <Logo
-            image={require("./assets/logo-xd.png")} 
-            text="XD"
-            />
+          ))}         
+            
           </ScrollView>
+          <Subtitle>Continue Learning</Subtitle>
           <ScrollView horizontal={true} style={{ paddingBottom: 30 }} 
           showsHorizontalScrollIndicator={false}>
+            {cards.map((card, index) => (
             <Card 
-            title="Styled Components" 
-            image={require('./assets/background2.jpg')} 
-            caption="dsa" 
-            subtitle="Fantastisk emne" 
-            logo={require('./assets/logo-react.png')}
+            title={card.title} 
+            image={card.image} 
+            caption={card.caption} 
+            subtitle={card.subtitle} 
+            logo={card.logo}
             />
-            <Card 
-            title="Styled Components" 
-            image={require('./assets/background5.jpg')} 
-            caption="dsa" 
-            subtitle="Fantastisk emne" 
-            logo={require('./assets/logo-react.png')}
-            />
-            <Card 
-            title="Styled Components" 
-            image={require('./assets/background8.jpg')} 
-            caption="dsa" 
-            subtitle="Fantastisk emne" 
-            logo={require('./assets/logo-react.png')}
-            />
+            ))}
           </ScrollView>
         </ScrollView>
       </SafeAreaView>
@@ -96,7 +56,7 @@ color: #b8bece;
 font-weight: 600;
 font-size: 15px;
 margin-left: 20px;
-margin-top: 50px;
+margin-top: 10px;
 text-transform: uppercase;
 `
 
@@ -134,4 +94,60 @@ top: 0;
 left: 0;
 `;
 
+const logos = [
+  {
+    image: require("./assets/logo-framerx.png"),
+    text: "Framer X"
+  },
+  {
+    image: require("./assets/logo-figma.png"),
+    text: "Figma"
+  },
+  {
+    image: require("./assets/logo-swift.png"),
+    text: "Swift"
+  },
+  {
+    image: require("./assets/logo-invision.png"),
+    text: "Invision"
+  },
+  {
+    image: require("./assets/logo-react.png"),
+    text: "React"
+  },
+  {
+    image: require("./assets/logo-sketch.png"),
+    text: "Sketch"
+  }
+];
 
+const cards = [
+  {
+    title: "React Native fo Designers",
+    image: require("./assets/background11.jpg"),
+    subtitle: "React Native",
+    caption: "1 of 12 sections",
+    logo: require("./assets/logo-figma.png"),
+  },
+  {
+    title: "Styled Components",
+    image: require("./assets/background12.jpg"),
+    subtitle: "React Native",
+    caption: "1 of 12 sections",
+    logo: require("./assets/logo-invision.png"),
+  },
+  {
+    title: "Props and Icons",
+    image: require("./assets/background13.jpg"),
+    subtitle: "React Native",
+    caption: "1 of 12 sections",
+    logo: require("./assets/logo-react.png"),
+  },
+  {
+    title: "Static data and Loop",
+    image: require("./assets/background14.jpg"),
+    subtitle: "React Native",
+    caption: "1 of 12 sections",
+    logo: require("./assets/logo-swift.png"),
+  }
+];
