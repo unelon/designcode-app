@@ -21,8 +21,8 @@ margin: 0 8px;
 `;
 
 const Image = styled.Image`
-width: 36px;
-height: 36px;
+width: 100px;
+height: 30px;
 `;
 
 const Text = styled.Text`

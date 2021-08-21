@@ -32,7 +32,7 @@ export default function HomeScreen() {
             />
           ))}   
           </ScrollView>
-          <Subtitle>Continue Learning</Subtitle>
+          <Subtitle>Upcoming Webinars</Subtitle>
           <ScrollView horizontal={true} style={{ paddingBottom: 30 }} 
           showsHorizontalScrollIndicator={false}>
             {cards.map((card, index) => (
@@ -43,6 +43,7 @@ export default function HomeScreen() {
             caption={card.caption} 
             subtitle={card.subtitle} 
             logo={card.logo}
+            timestamp={card.timestamp}
             />
             ))}
           </ScrollView>
@@ -110,59 +111,57 @@ left: 0;
 
 const logos = [
   {
-    image: require("./assets/logo-framerx.png"),
-    text: "Framer X"
+    image: require("./assets/logo-1.jpg"),
   },
   {
-    image: require("./assets/logo-figma.png"),
-    text: "Figma"
+    image: require("./assets/logo-2.jpg"),
   },
   {
-    image: require("./assets/logo-swift.png"),
-    text: "Swift"
+    image: require("./assets/logo-3.jpg"),
   },
   {
-    image: require("./assets/logo-invision.png"),
-    text: "Invision"
+    image: require("./assets/logo-4.jpg"),
   },
   {
-    image: require("./assets/logo-react.png"),
-    text: "React"
+    image: require("./assets/logo-5.jpg"),
   },
   {
-    image: require("./assets/logo-sketch.png"),
-    text: "Sketch"
+    image: require("./assets/logo-6.jpg"),
   }
 ];
 
 const cards = [
   {
-    title: "React Native fo Designers",
-    image: require("./assets/background11.jpg"),
-    subtitle: "React Native",
-    caption: "1 of 12 sections",
-    logo: require("./assets/logo-figma.png"),
+    title: "Psykologisk manipulation",
+    image: require("./assets/bg-zevio-1.jpg"),
+    subtitle: "Psykologi",
+    caption: "Niels Krøjgaard",
+    logo: require("./assets/img-zevio-1.jpg"),
+    timestamp: "12 hours",
   },
   {
-    title: "Styld Components",
-    image: require("./assets/background12.jpg"),
-    subtitle: "React Native",
-    caption: "1 of 12 sections",
-    logo: require("./assets/logo-invision.png"),
+    title: 'Jeg hater ordet "naturlig"',
+    image: require("./assets/img-zevio-2.jpg"),
+    subtitle: "Climate and environment",
+    caption: "Sunniva Rose",
+    logo: require("./assets/img-zevio-2.jpg"),
+    timestamp: "1 day 4 hours",
   },
   {
-    title: "Props and Icons",
-    image: require("./assets/background13.jpg"),
-    subtitle: "React Native",
-    caption: "1 of 12 sections",
-    logo: require("./assets/logo-react.png"),
+    title: "Slug kamelen - der kommer flere",
+    image: require("./assets/img-zevio-3.jpg"),
+    subtitle: "Parenting",
+    caption: "Flemming Møldrup, Julie Ralund",
+    logo: require("./assets/img-zevio-3.jpg"),
+    timestamp: "1 day 22 hours",
   },
   {
-    title: "Static data and Loop",
-    image: require("./assets/background14.jpg"),
-    subtitle: "React Native",
-    caption: "1 of 12 sections",
-    logo: require("./assets/logo-swift.png"),
+    title: "Vänligare och smartare arbetsplats",
+    image: require("./assets/img-zevio-4.jpg"),
+    subtitle: "Organizational Change",
+    caption: "Dennis Nørmark",
+    logo: require("./assets/img-zevio-4.jpg"),
+    timestamp: "2 day 14 hours",
   }
 ];
 
