@@ -5,7 +5,6 @@ import Card from './components/Card';
 import { Ionicons } from "@expo/vector-icons";
 import { NotificationIcon } from './components/Icons';
 import Logo from "./components/Logo";
-import Course from './components/Course';
 
 export default function HomeScreen() {
   return (
@@ -62,19 +61,6 @@ export default function HomeScreen() {
             />
             ))}
           </ScrollView>
-          <Subtitle>Popular Courses</Subtitle>
-          {courses.map((course, index) => (
-            <Course 
-            key={index}
-            image={course.image}
-            title={course.title}
-            subtitle={course.subtitle}
-            logo={course.logo}
-            author={course.author}
-            avatar={course.avatar}
-            caption={course.caption}
-            />
-          ))}
         </ScrollView>
       </SafeAreaView>
     </Container>
@@ -214,50 +200,4 @@ const trending = [
   }
 ];
 
-const courses = [
-  {
-    title: "Prototype in Invision Studio",
-    subtitle: "10 sections",
-    image: require("./assets/background13.jpg"),
-    logo: require("./assets/logo-studio.png"),
-    author: "Rune Lillevang",
-    avatar: require("./assets/avatar.jpg"),
-    caption: "Design and interactive prototype"
-  },
-  {
-    title: "Learn Photoshop",
-    subtitle: "6 sections",
-    image: require("./assets/background14.jpg"),
-    logo: require("./assets/logo-studio.png"),
-    author: "Rune Lillevang",
-    avatar: require("./assets/avatar.jpg"),
-    caption: "Design and interactive prototype"
-  },
-  {
-    title: "Prototype in Invision Studio",
-    subtitle: "10 sections",
-    image: require("./assets/background13.jpg"),
-    logo: require("./assets/logo-studio.png"),
-    author: "Rune Lillevang",
-    avatar: require("./assets/avatar.jpg"),
-    caption: "Design and interactive prototype"
-  },
-  {
-    title: "Prototype in Invision Studio",
-    subtitle: "10 sections",
-    image: require("./assets/background13.jpg"),
-    logo: require("./assets/logo-studio.png"),
-    author: "Rune Lillevang",
-    avatar: require("./assets/avatar.jpg"),
-    caption: "Design and interactive prototype"
-  },
-  {
-    title: "Prototype in Invision Studio",
-    subtitle: "10 sections",
-    image: require("./assets/background13.jpg"),
-    logo: require("./assets/logo-studio.png"),
-    author: "Rune Lillevang",
-    avatar: require("./assets/avatar.jpg"),
-    caption: "Design and interactive prototype"
-  },
-];
+
