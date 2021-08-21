@@ -62,7 +62,7 @@ margin-top: 4px;
 
 const Container = styled.View `
 background: white;
-width: 315px;
+width: 300px;
 height: 320px;
 border-radius:14px;
 margin-left:20px;

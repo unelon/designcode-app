@@ -19,7 +19,7 @@ export default function HomeScreen() {
           <NotificationIcon 
           style={{ position:'absolute', right: 20, top: 5 }}
           />
-          </Titlebar>                    
+          </Titlebar>             
           <ScrollView 
           horizontal={true} 
           showsHorizontalScrollIndicator={false} 
@@ -32,10 +32,25 @@ export default function HomeScreen() {
             />
           ))}   
           </ScrollView>
-          <Subtitle>Upcoming Webinars</Subtitle>
+          <Subtitle>Recommended for you</Subtitle>
           <ScrollView horizontal={true} style={{ paddingBottom: 30 }} 
           showsHorizontalScrollIndicator={false}>
-            {cards.map((card, index) => (
+            {recommended.map((card, index) => (
+            <Card 
+            key={index}
+            title={card.title} 
+            image={card.image} 
+            caption={card.caption} 
+            subtitle={card.subtitle} 
+            logo={card.logo}
+            timestamp={card.timestamp}
+            />
+            ))}
+          </ScrollView>
+          <Subtitle>Trending</Subtitle>
+          <ScrollView horizontal={true} style={{ paddingBottom: 30 }} 
+          showsHorizontalScrollIndicator={false}>
+            {trending.map((card, index) => (
             <Card 
             key={index}
             title={card.title} 
@@ -67,12 +82,11 @@ export default function HomeScreen() {
 }
 
 const Subtitle = styled.Text `
-color: #b8bece;
+color: #0c0c0c;
 font-weight: 600;
-font-size: 15px;
+font-size: 17px;
 margin-left: 20px;
 margin-top: 10px;
-text-transform: uppercase;
 `
 
 const Container = styled.View`
@@ -130,7 +144,7 @@ const logos = [
   }
 ];
 
-const cards = [
+const recommended = [
   {
     title: "Psykologisk manipulation",
     image: require("./assets/bg-zevio-1.jpg"),
@@ -161,6 +175,41 @@ const cards = [
     subtitle: "Organizational Change",
     caption: "Dennis Nørmark",
     logo: require("./assets/img-zevio-4.jpg"),
+    timestamp: "2 day 14 hours",
+  }
+];
+
+const trending = [
+  {
+    title: "Yngre med årene",
+    image: require("./assets/trending-1.jpg"),
+    subtitle: "Helse",
+    caption: "Bente Klarlund",
+    logo: require("./assets/trending-1.jpg"),
+    timestamp: "12 hours",
+  },
+  {
+    title: "En aften med Phillip faber",
+    image: require("./assets/trending-2.jpg"),
+    subtitle: "Underholdning",
+    caption: "Phillip Faber",
+    logo: require("./assets/trending-2.jpg"),
+    timestamp: "1 day 4 hours",
+  },
+  {
+    title: "Slug kamelen - der kommer flere",
+    image: require("./assets/trending-3.jpg"),
+    subtitle: "Parenting",
+    caption: "Flemming Møldrup, Julie Ralund",
+    logo: require("./assets/trending-3.jpg"),
+    timestamp: "1 day 22 hours",
+  },
+  {
+    title: "Vänligare och smartare arbetsplats",
+    image: require("./assets/trending-4.jpg"),
+    subtitle: "Organizational Change",
+    caption: "Dennis Nørmark",
+    logo: require("./assets/trending-4.jpg"),
     timestamp: "2 day 14 hours",
   }
 ];
